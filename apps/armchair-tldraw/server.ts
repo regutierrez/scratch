@@ -1,5 +1,8 @@
 const port = Number(process.env.REALTIME_PORT ?? 8787)
 const model = process.env.OPENAI_REALTIME_MODEL ?? 'gpt-realtime'
+const BunClientWebSocket = WebSocket as unknown as {
+  new (url: string | URL, options?: Bun.WebSocketOptions): WebSocket
+}
 
 type RelayData = {
   upstream?: WebSocket
@@ -31,7 +34,7 @@ const server = Bun.serve<RelayData>({
   },
   websocket: {
     open(client) {
-      const upstream = new WebSocket(
+      const upstream = new BunClientWebSocket(
         `wss://api.openai.com/v1/realtime?model=${encodeURIComponent(model)}`,
         {
           headers: {
