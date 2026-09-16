@@ -215,6 +215,22 @@ export async function runFixtureSuite(
         onProgress({ type: "slot", slot, done: slots.length, total });
       }
 
+  // judge.md declares its criteria up front; judge.ts criteria are discovered from results.
+  for (const evalInfo of evals) {
+    const declared = new Set(evalInfo.criteria.map((criterion) => criterion.id));
+    for (const slot of slots)
+      if (slot.evalId === evalInfo.id)
+        for (const [id, score] of Object.entries(slot.judgment.scores))
+          if (score.source === "judge.ts" && !declared.has(id)) {
+            declared.add(id);
+            evalInfo.criteria.push({
+              id,
+              name: id.replaceAll("_", " "),
+              source: "judge.ts",
+            });
+          }
+  }
+
   const completedAt = Date.now();
   const report: RunReport = {
     id: runId,
