@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OpenEval · evidence viewer</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">◈</span>
+        <div>
+          <h1>OpenEval <span class="muted">evidence viewer</span></h1>
+          <p class="sub" id="benchmark-line">Loading…</p>
+        </div>
+      </div>
+      <div class="actions">
+        <span class="badge badge-mode" id="mode-badge" title="Constructed responses; code judges run for real, rubric judgments are authored fixtures">fixture mode</span>
+        <button id="run-button" class="primary">Run fixture suite</button>
+      </div>
+    </header>
+
+    <section id="progress" class="progress hidden">
+      <div class="progress-head">
+        <strong id="progress-title">Running…</strong>
+        <span id="progress-count" class="muted"></span>
+      </div>
+      <div class="bar"><div id="progress-bar" class="bar-fill"></div></div>
+      <pre id="progress-log" class="log"></pre>
+    </section>
+
+    <main id="app">
+      <section id="empty" class="empty">
+        <h2>No run recorded yet</h2>
+        <p>
+          Click <strong>Run fixture suite</strong> to record evidence for each constructed candidate
+          response, execute every <code>judge.ts</code> in an isolated Bun process, merge the rubric
+          criteria, and load the results here. No Docker, OpenCode, or API keys are needed.
+        </p>
+      </section>
+
+      <section id="results" class="hidden">
+        <div class="stats" id="stats"></div>
+
+        <div class="grid">
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Scores by eval × model</h2>
+              <span class="muted small">equal criterion weights · null = unresolved</span>
+            </div>
+            <table class="matrix" id="matrix"></table>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Runs</h2>
+              <div class="filters">
+                <select id="filter-eval"><option value="">all evals</option></select>
+                <select id="filter-model"><option value="">all models</option></select>
+              </div>
+            </div>
+            <ul class="slots" id="slots"></ul>
+          </div>
+        </div>
+
+        <div class="panel detail" id="detail"></div>
+      </section>
+    </main>
+
+    <footer class="foot muted small">
+      Built on <code>@hona/openeval</code> · <span id="sdk-version"></span> ·
+      <a href="https://openev.al" target="_blank" rel="noreferrer">openev.al</a> ·
+      <a href="https://github.com/Hona/openeval" target="_blank" rel="noreferrer">Hona/openeval</a>
+    </footer>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
