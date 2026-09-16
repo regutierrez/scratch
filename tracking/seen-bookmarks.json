@@ -7,12 +7,20 @@
       "date": "2026-09-15"
     },
     {
-      "id": "2100143086429217278",
-      "title": "BrowserSkill (agent ↔ real browser bridge)",
-      "url": "https://x.com/TencentAI_News/status/2100143086429217278",
+      "id": "2100036101809619314",
+      "title": "Jev / TypeSafe System One (typed decisions)",
+      "url": "https://x.com/NathanFlurry/status/2100036101809619314",
       "date": "2026-09-16"
     }
   ],
-  "skipped": [],
+  "skipped": [
+    {
+      "id": "2100143086429217278",
+      "title": "BrowserSkill (agent ↔ real browser bridge)",
+      "url": "https://x.com/TencentAI_News/status/2100143086429217278",
+      "date": "2026-09-16",
+      "reason": "owner passed — requires browser extension + local bsk daemon"
+    }
+  ],
   "built": []
 }
