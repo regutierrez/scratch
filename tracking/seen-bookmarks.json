@@ -5,18 +5,6 @@
       "title": "tldraw × gpt-live (armchair websites)",
       "url": "https://x.com/threepointone/status/2098895834934804567",
       "date": "2026-09-15"
-    },
-    {
-      "id": "2096929751994687950",
-      "title": "Pi (createAgentSession cwd scoping)",
-      "url": "https://x.com/pidotdev/status/2096929751994687950",
-      "date": "2026-09-16"
-    },
-    {
-      "id": "2099600259324211259",
-      "title": "Pangram (AI text detection API)",
-      "url": "https://x.com/mitsuhiko/status/2099600259324211259",
-      "date": "2026-09-16"
     }
   ],
   "skipped": [
@@ -40,6 +28,20 @@
       "url": "https://x.com/matthewcp/status/2099883067183636732",
       "date": "2026-09-16",
       "reason": "owner passed"
+    },
+    {
+      "id": "2096929751994687950",
+      "title": "Pi (createAgentSession cwd scoping)",
+      "url": "https://x.com/pidotdev/status/2096929751994687950",
+      "date": "2026-09-16",
+      "reason": "owner skipped"
+    },
+    {
+      "id": "2099600259324211259",
+      "title": "Pangram (AI text detection API)",
+      "url": "https://x.com/mitsuhiko/status/2099600259324211259",
+      "date": "2026-09-16",
+      "reason": "owner skipped"
     }
   ],
   "built": []
