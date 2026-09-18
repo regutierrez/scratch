@@ -1,0 +1,26 @@
+{
+  "name": "openeval-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "OpenEval (@hona/openeval) tech demo: typed prompt/judge suite, offline fixture run path, and evidence viewer",
+  "engines": {
+    "bun": ">=1.4.2"
+  },
+  "scripts": {
+    "dev": "bun run src/server.ts",
+    "eval": "bun run src/cli.ts",
+    "typecheck": "tsc --noEmit",
+    "live:image": "bunx --bun @hona/openeval image --benchmark benchmark",
+    "live:plan": "bunx --bun @hona/openeval plan --benchmark benchmark",
+    "live:run": "bunx --bun @hona/openeval run --benchmark benchmark",
+    "live:view": "bunx --bun @hona/openeval view --benchmark benchmark"
+  },
+  "dependencies": {
+    "@hona/openeval": "0.3.2"
+  },
+  "devDependencies": {
+    "@types/bun": "1.3.6",
+    "typescript": "5.9.3"
+  }
+}
