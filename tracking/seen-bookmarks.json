@@ -2,24 +2,30 @@
   "proposed": [
     {
       "id": "2098895834934804567",
-      "title": "tldraw × gpt-live (armchair websites)",
+      "title": "tldraw \u00d7 gpt-live (armchair websites)",
       "url": "https://x.com/threepointone/status/2098895834934804567",
       "date": "2026-09-15"
     },
     {
       "id": "2098354727880921121",
-      "title": "OpenEval (@hona/openeval — Bun agent evals)",
+      "title": "OpenEval (@hona/openeval \u2014 Bun agent evals)",
       "url": "https://x.com/LukeParkerDev/status/2098354727880921121",
       "date": "2026-09-16"
+    },
+    {
+      "id": "2100685924401295764",
+      "title": "Needle 3 (Cactus \u2014 tiny tool-call / extraction model)",
+      "url": "https://x.com/cactuscompute/status/2100685924401295764",
+      "date": "2026-09-18"
     }
   ],
   "skipped": [
     {
       "id": "2100143086429217278",
-      "title": "BrowserSkill (agent ↔ real browser bridge)",
+      "title": "BrowserSkill (agent \u2194 real browser bridge)",
       "url": "https://x.com/TencentAI_News/status/2100143086429217278",
       "date": "2026-09-16",
-      "reason": "owner passed — requires browser extension + local bsk daemon"
+      "reason": "owner passed \u2014 requires browser extension + local bsk daemon"
     },
     {
       "id": "2100036101809619314",
